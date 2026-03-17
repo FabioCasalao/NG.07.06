@@ -2,6 +2,12 @@ public class AudioVisualEquipment extends Equipment {
     String resolution;
     boolean isSmart;
 
+    public AudioVisualEquipment(String name, double dailyPrice, String resolution, boolean isSmart) {
+        super(name, dailyPrice);
+        this.resolution = resolution;
+        this.isSmart = isSmart;
+    }
+
     @Override
     public String getEquipmentType() {
         return "AudioVisualEquipment";
