@@ -17,22 +17,25 @@ public class Equipment {
     }
 
     public String getEquipmentType() {
-        return this.getClass().getSimpleName();
+        return "Equipment";
     }
 
-    public Double insuranceRate() {
-        return dailyPrice * 0.1;
+    public double insuranceRate() {
+        return 0.01;
     }
 
-    public Double calculateInsurance() {
-        return insuranceRate() * 30;
+    public double calculateInsurance() {
+        return dailyPrice * insuranceRate();
     }
 
-    public Boolean equals(Equipment o) {
-        return this.id.equals(o.id);
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Equipment equipment = (Equipment) o;
+        return id.equals(equipment.id);
     }
 
-    public Int hashCode() {
+    public int hashCode() {
         return id.hashCode();
     }
 

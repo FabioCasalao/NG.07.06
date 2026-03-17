@@ -7,12 +7,18 @@ public class ComputingEquipment extends Equipment {
     }
     
     @Override
+    public String getEquipmentType() {
+        return "ComputingEquipment";
+    }
+
+    @Override
+    public double insuranceRate() {
+        return 0.05;
+    }
+
+    @Override
     public String toString() {
-        return "ComputingEquipment{" +
-                "id='" + getId() + '\'' +
-                ", name='" + getName() + '\'' +
-                ", dailyPrice=" + getDailyPrice() +
-                ", processor='" + processor + '\'' +
+        return super.toString() + ", processor='" + processor + '\'' +
                 '}';
     }
 }
