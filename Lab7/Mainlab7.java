@@ -1,7 +1,7 @@
 import java.time.LocalDate;
 import java.time.Month;
 
-public class Main {
+public class Mainlab7 {
     public static void main(String[] args) {
         // Criar vários objetos Item
         Item espada = new Item("Espada Longa", "weapon", 3, LocalDate.of(2025, Month.MARCH, 10));
