@@ -20,34 +20,40 @@ public class App
         System.out.println(classGroup);
 
         //Nivel 1
-        classGroup.removeByEnrollments(3);
-        System.out.println("After removal:");
-        System.out.println(classGroup);
+        //classGroup.removeByEnrollments(3);
+        //System.out.println("After removal:");
+        //System.out.println(classGroup);
 
         //Nivel 2
         long count = classGroup.countGrades(7.0);
         System.out.println("Number of students with grade above 7.0: " + count);
+        System.out.println("--------------------------------------------------");
 
         classGroup.removeByEnrollmentsF(2);
         System.out.println("After functional removal:");
         System.out.println(classGroup);
+        System.out.println("--------------------------------------------------");
 
         //Nivel 3
-        classGroup.sortByName();
+        List<Student> sortedByName = classGroup.sortByName();
         System.out.println("After sorting by name:");
-        System.out.println(classGroup);
+        System.out.println(sortedByName);
+        System.out.println("--------------------------------------------------");
 
-        classGroup.top3();
+        List<Student> top3Students = classGroup.top3();
         System.out.println("Top 3 students:");
-        System.out.println(classGroup);
+        System.out.println(top3Students);
+        System.out.println("--------------------------------------------------");
 
         classGroup.avgGrade();
         System.out.println("Average grade: " + classGroup.avgGrade());
+        System.out.println("--------------------------------------------------");
 
         //Nivel 4
         classGroup.hasLowerGrade(count);
         System.out.println("Has students with grade lower than " + count + ": " + classGroup.hasLowerGrade(count));
-    
+        System.out.println("--------------------------------------------------");
+
         classGroup.validNumbers();
         System.out.println("All students have valid numbers: " + classGroup.validNumbers());
     

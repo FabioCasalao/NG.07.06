@@ -60,8 +60,8 @@ public class ClassGroup {
     //Nivel 3
     public List<Student> sortByName() {
         return students.stream()
-                .sorted(Comparator.comparing(Student::getName))
-                .collect(Collectors.toList());
+            .sorted(Comparator.comparing(Student::getName))
+            .toList();
     }
 
     public List<Student> top3(){
